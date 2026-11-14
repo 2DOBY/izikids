@@ -1,5 +1,3 @@
-// Добавьте эту строку в самом верху файла:
-
 const Hero = () => (
   <section className="hero" id="top">
     <div className="blob b1" />
@@ -10,7 +8,7 @@ const Hero = () => (
     <div className="hero-content">
       <div className="hph">
         {/* Путь начинается со слеша — это значит "ищи в папке public" */}
-        <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt=«Наша команда с плюшевым другом» />
+        <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="Наша команда с плюшевым другом" />
       </div>
 
       <h1>
