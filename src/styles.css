@@ -381,12 +381,17 @@ header {
 /* --- WHY --- */
 .why {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 .w {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 28px 22px;
-  border-radius: 40px;
+  min-height: 210px;
+  border-radius: 32px;
   text-align: center;
   font-weight: 800;
   font-size: 18px;
@@ -394,7 +399,7 @@ header {
   cursor: default;
 }
 .w:hover {
-  transform: rotate(-3deg) scale(1.05);
+  transform: translateY(-5px);
 }
 .w i {
   display: block;
@@ -406,37 +411,44 @@ header {
   display: block;
   font: 400 15px Nunito;
   margin-top: 4px;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 .w:nth-child(1) {
   background: var(--pink);
   color: #fff;
-  border-radius: 40px 40px 40px 8px;
 }
 .w:nth-child(2) {
   background: var(--green);
   color: #1d3a16;
-  border-radius: 99px;
 }
 .w:nth-child(3) {
   background: var(--yel);
   color: #3a2d00;
-  border-radius: 90px 90px 24px 24px;
 }
 .w:nth-child(4) {
   background: var(--blue);
   color: #fff;
-  border-radius: 8px 40px 40px 40px;
 }
 .w:nth-child(5) {
-  background: var(--pink);
+  background: var(--purple);
   color: #fff;
-  border-radius: 40px 8px 40px 40px;
 }
 .w:nth-child(6) {
-  background: var(--green);
-  color: #1d3a16;
-  border-radius: 40px 40px 8px 40px;
+  background: var(--orange);
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .why {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .why {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .w {
+    min-height: 0;
+  }
 }
 
 /* --- CALC --- */
@@ -1045,13 +1057,7 @@ header {
   border: 6px solid var(--yel);
   box-shadow: 0 16px 40px rgba(60, 110, 180, 0.25);
 }
-.gal figcaption {
-  margin-top: 12px;
-  font-weight: 800;
-}
-.gal a {
-  color: var(--purple);
-}
+
 
 /* О нас */
 .stats {
