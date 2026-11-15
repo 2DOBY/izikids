@@ -10,15 +10,10 @@ export default function Club() {
       </p>
       <figure className="gal">
         <img
-          src={`${base}club.jpg`}
+          src={${base}club.jpg}
           alt="Дети и дракончик Изики на занятии"
           loading="lazy"
         />
-        <figcaption>
-          <a href={`${base}flyer.jpg`} target="_blank" rel="noreferrer">
-            Открыть листовку
-          </a>
-        </figcaption>
       </figure>
     </section>
   );
