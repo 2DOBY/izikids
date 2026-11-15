@@ -1,3 +1,7 @@
 export default function Footer() {
-  return <footer>© {new Date().getFullYear()} IZIkids · MAX · Taplink</footer>;
+  return (
+    <footer>
+      © {new Date().getFullYear()} ИЗИКИ · детский клуб · г. Всеволожск
+    </footer>
+  );
 }
