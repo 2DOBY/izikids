@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { directions } from "../data";
 
+const fmt = (n: number) => new Intl.NumberFormat("ru-RU").format(n);
+
 export default function Directions() {
   const [activeId, setActiveId] = useState(directions[0].id);
   const active = directions.find((d) => d.id === activeId)!;
@@ -32,6 +34,9 @@ export default function Directions() {
               <li key={p}>{p}</li>
             ))}
           </ul>
+          <div className="pr">
+            {active.price ? `от ${fmt(active.price)} ₽` : "Цена при записи"}
+          </div>
         </div>
       </div>
     </section>
