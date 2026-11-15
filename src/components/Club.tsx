@@ -10,7 +10,7 @@ export default function Club() {
       </p>
       <figure className="gal">
         <img
-          src={${base}club.jpg}
+          src={base + "club.jpg"}
           alt="Дети и дракончик Изики на занятии"
           loading="lazy"
         />
