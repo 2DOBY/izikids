@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL;
+
 const Hero = () => (
   <section className="hero" id="top">
     <div className="blob b1" />
@@ -6,19 +8,26 @@ const Hero = () => (
     <div className="blob b4" />
 
     <div className="hero-content">
-      <div className="hph">
-        {/* Путь начинается со слеша — это значит "ищи в папке public" */}
-        <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="Наша команда с плюшевым другом" />
+      <div className="hph hph--logo">
+        <img src={`${base}logo.png`} alt="ИЗИКИ — детский клуб" />
       </div>
+
+      <div className="badge">Новый клуб во Всеволожске</div>
 
       <h1>
         Здесь детям <span>изи!</span>
       </h1>
 
       <p>
-        Английский, логопед и подготовка к школе в одном месте. Учим играя — без
-        учебников и скучной зубрежки.
+        Английский для детей от 2 лет, логопед и подготовка к школе. Учим играя
+        — без перевода, без учебников и скучной зубрежки.
       </p>
+
+      <div className="tags">
+        <span>📍 Всеволожск</span>
+        <span>💻 Онлайн по всему миру</span>
+        <span>👥 Группы до 6 человек</span>
+      </div>
 
       <a href="#join" className="btn">
         Записаться на пробное
