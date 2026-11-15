@@ -4,8 +4,8 @@ import Hero from "./components/Hero";
 import Directions from "./components/Directions";
 import Why from "./components/Why";
 import About from "./components/About";
-import Calculator from "./components/Calculator";
-import Reviews from "./components/Reviews";
+import Club from "./components/Club";
+import Prices from "./components/Prices";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Toast from "./components/Toast";
@@ -43,9 +43,9 @@ export default function App() {
         <Hero />
         <Directions />
         <Why />
+        <Club />
         <About />
-        <Calculator onCta={() => (window.location.hash = "#join")} />
-        <Reviews onCta={() => (window.location.hash = "#join")} />
+        <Prices onCta={() => (window.location.hash = "#join")} />
         <ContactForm
           onSuccess={() => setToast("Ура! Заявка улетела 🚀 Скоро позвоним")}
         />
@@ -54,4 +54,5 @@ export default function App() {
       <Toast message={toast} />
     </>
   );
+}
 }
