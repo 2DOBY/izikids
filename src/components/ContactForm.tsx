@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { FC, FormEvent } from "react";
+import { contacts } from "../data";
 
 type Props = { onSuccess: () => void };
 
@@ -21,12 +22,12 @@ const ContactForm: FC<Props> = ({ onSuccess }) => {
 
       <div className="form">
         <div className="info">
-          <h3>IZIkids</h3>
-          <p>📍 Ваш адрес</p>
-          <p>📞 +7 (000) 000-00-00</p>
-          <p>🕘 Пн–Пт, 8:00–19:00</p>
-          <p>💬 Написать в MAX</p>
-          <p>🔗 taplink.cc/izikids</p>
+          <h3>ИЗИКИ</h3>
+          <p>📍 {contacts.address}</p>
+          <p>
+            📞 <a href={contacts.phoneHref}>{contacts.phone}</a>
+          </p>
+          <p>💻 Онлайн — из любого города</p>
         </div>
 
         {sent ? (
@@ -58,10 +59,12 @@ const ContactForm: FC<Props> = ({ onSuccess }) => {
               <option value="" disabled>
                 Направление
               </option>
-              <option>Английский</option>
+              <option>Английский для детей</option>
+              <option>Английский для взрослых</option>
               <option>Логопед</option>
               <option>Подготовка к школе</option>
-              <option>Комплекс</option>
+              <option>Английский лагерь</option>
+              <option>Праздники и мастер-классы</option>
             </select>
             <button className="btn b" type="submit">
               Отправить
